@@ -1,0 +1,30 @@
+<div class="example-container">
+    <form [formGroup]="form" (ngSubmit)="onsubmit()">
+        <mat-form-field>
+            <input matInput placeholder="titre" formControlName="titre">
+
+        </mat-form-field>
+
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="lieu" formControlName="lieu">
+
+        </mat-form-field>
+
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="date" formControlName="date">
+
+        </mat-form-field>
+        <br>
+
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+
+
+
+
+</div>

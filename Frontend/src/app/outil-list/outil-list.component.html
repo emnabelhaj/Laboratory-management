@@ -1,0 +1,42 @@
+<div fxLayout="row" fxLayoutAlign="end center">
+    <button routerLink="/FormTool" class="btn btn-primary">
+        create new
+    </button>
+</div>
+<mat-label>Filter</mat-label>
+<input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="source">
+        <th mat-header-cell class="px-12" *matHeaderCellDef> Source </th>
+        <td mat-cell class="px-12" *matCellDef="let element"> {{element.source}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+
+
+
+
+    <!--stickyEnd ma3neh dima ijiblik il column hethi dima fil le5er-->
+    <ng-container matColumnDef="Actions" stickyEnd>
+        <th mat-header-cell class="px-12" *matHeaderCellDef>Actions </th>
+        <td mat-cell class="px-12" *matCellDef="let element">
+            <button routerLink="{{element.id}}/edit">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button (click)="delete(element.id)">
+                <mat-icon>delete</mat-icon>
+            </button>
+
+        </td>
+
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

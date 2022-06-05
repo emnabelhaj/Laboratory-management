@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>{{titre}}</h2>
+<mat-dialog-content>{{Message}}</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>{{cancel}}</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <button mat-button [mat-dialog-close]="true">{{confirm}}</button>
+    <!--mat-dialog-close biha hiya na3rf il user 3al chnou nzel , ken true rahou ma3neha nzel 3al bouton delete  -->
+
+</mat-dialog-actions>
