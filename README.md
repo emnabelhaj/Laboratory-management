@@ -1,5 +1,5 @@
 # Laboratory-management
-Laboratory management web application with miroservices architecture
+single-page web application using Microservices Architecture: Research lab members and events management.
 
 This project was generated with Angular CLI version 12.1.1.
 
